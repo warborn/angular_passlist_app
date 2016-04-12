@@ -6,6 +6,14 @@ angular.module('passlistApp')
 
   this.getGroups = function() {
     return $http.get(domain + 'groups');
+  };
+
+  this.getGroup = function(groupId) {
+    return $http.get(domain + 'groups/' + groupId);
+  };
+
+  this.newGroup = function(group) {
+    return $http.post(domain + 'groups', group);
   }
 
 }]);

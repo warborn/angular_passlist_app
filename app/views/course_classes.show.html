@@ -1,0 +1,22 @@
+<div class="mdl-grid">
+  <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric">Numero de cuenta</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
+        <th>Nombre</th>
+        <th>Assistió</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="student in students" ng-class="{ 'assist': student.assist }">
+        <td class="mdl-data-table__cell--non-numeric">{{ student.account_number }}</td>
+        <td>{{ student.last_name }}</td>
+        <td>{{ student.maiden_name }}</td>
+        <td>{{ student.first_name }}</td>
+        <td><input type="checkbox" class="checkbox" ng-model="student.assist" ng-click="toggleAssist(student)"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

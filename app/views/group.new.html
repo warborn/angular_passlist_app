@@ -1,0 +1,39 @@
+<div class="mdl-grid">
+  <!-- Simple Textfield -->
+  <form class="submit-form" id="new-group" ng-init="groupData = {}" ng-submit="groupRegistration({ group: groupData })">
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" ng-model="groupData.name">
+      <label class="mdl-textfield__label" for="sample1">Nombre del grupo</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" ng-model="groupData.subject">
+      <label class="mdl-textfield__label" for="sample1">Asignatura</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" ng-model="groupData.retardment">
+      <label class="mdl-textfield__label" for="sample2">No. de retardos</label>
+      <span class="mdl-textfield__error">No es un número!</span>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" ng-model="groupData.time_limit">
+      <label class="mdl-textfield__label" for="sample1">Hora limite</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" ng-model="groupData.begin_date">
+      <label class="mdl-textfield__label" for="sample1">fecha de inicio</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield">
+      <input class="mdl-textfield__input" type="text" ng-model="groupData.end_date">
+      <label class="mdl-textfield__label" for="sample1">Fecha de fin</label>
+    </div>
+    <h4>Dias de clase</h4>
+    <addclassdays></addclassdays>
+    <hr>
+    <div id="classdays">
+    </div>
+    <!-- Accent-colored raised button with ripple -->
+    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+      Crear grupo
+    </button>
+  </form>
+</div>
